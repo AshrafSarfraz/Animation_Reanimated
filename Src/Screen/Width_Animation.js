@@ -1,5 +1,5 @@
 import React from 'react';
-import { ButText, TouchableOpacity, View,StyleSheet, Text } from 'react-native';
+import { Text, TouchableOpacity, View,StyleSheet } from 'react-native';
 import Animated, { useSharedValue, useAnimatedStyle } from 'react-native-reanimated';
 
 export default function First_Screen() {
