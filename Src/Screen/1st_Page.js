@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text, TouchableOpacity, View,StyleSheet } from 'react-native';
+import { ButText, TouchableOpacity, View,StyleSheet, Text } from 'react-native';
 import Animated, { useSharedValue, useAnimatedStyle } from 'react-native-reanimated';
 
 export default function First_Screen() {
@@ -9,7 +9,7 @@ export default function First_Screen() {
     Animated_Width.value = Animated_Width.value + 50;
   };
   const handlePress1 = () => {
-    Animated_Width.value = Animated_Width.value  -50;
+    Animated_Width.value = Animated_Width.value -50;
   };
 
   const animatedStyle = useAnimatedStyle(() => {
@@ -17,23 +17,51 @@ export default function First_Screen() {
       width: Animated_Width.value,
       height: 100,
       backgroundColor: 'violet',
+      borderRadius:20,
     };
   });
 
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' ,}}>
       <Animated.View style={[animatedStyle]}>
-       
       </Animated.View>
-    <View style={{}} > 
-     <TouchableOpacity onPress={handlePress} style={{ backgroundColor: 'yellow', width: 100,height:55,}}>
-      <Text>Press</Text>
-     </TouchableOpacity>
-     <TouchableOpacity onPress={handlePress} style={{ backgroundColor: 'red', width: 100,}}>
-      <Text>Press</Text>
-     </TouchableOpacity>
-     </View>
+      <View style={styles.container}>
+      <TouchableOpacity onPress={handlePress} style={[styles.button, styles.lightButton]}>
+        <Text style={styles.buttonText}>More</Text>
+      </TouchableOpacity>
+      <TouchableOpacity onPress={handlePress1} style={[styles.button, styles.darkButton]}>
+        <Text style={styles.buttonText}>Less</Text>
+      </TouchableOpacity>
+    </View>
      
     </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    width:"90%",
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop:"5%",
+    paddingHorizontal: 20, // Optional: Add padding to the sides
+
+  },
+  button: {
+    width: 150,
+    height: 55,
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderRadius: 8,
+  },
+  lightButton: {
+    backgroundColor: 'brown', // Example of light color
+  },
+  darkButton: {
+    backgroundColor: 'darkred', // Example of dark color
+  },
+  buttonText: {
+    color: 'white', // Text color for both buttons
+    fontSize: 16, // Example font size
+  },
+});
