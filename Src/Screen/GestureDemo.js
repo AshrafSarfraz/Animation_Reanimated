@@ -39,7 +39,7 @@ const GestureDemo1 = () => {
       <PanGestureHandler onGestureEvent={gestureHandler}>
         <Animated.View
           style={[
-            {width: 100, height: 100, backgroundColor: 'yellow'},
+            {width: 140, height: 140, backgroundColor: 'red',borderRadius:150},
             animatedStyle,
           ]}></Animated.View>
       </PanGestureHandler>
