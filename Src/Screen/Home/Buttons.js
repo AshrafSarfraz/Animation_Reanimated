@@ -27,14 +27,13 @@ const Buttons_Animation=()=>{
         }
      })
      const Long_Animated_Style=useAnimatedStyle(()=>{
-        const Height=interpolate(Long_Bar.value,[0,1],[70,250])
+        const Height=interpolate(Long_Bar.value,[0,1],[60,250])
         const Padding_Vertical=interpolate(Long_Bar.value,[0,1],[0,15])
-        const justify_Content=interpolate(Long_Bar.value,[0,1],['center','space-between'])
+        const justify_Content=Long_Bar.value>0.5?'space-between':'center'
         return{
                 height:Height,
                 justifyContent:justify_Content,
                 paddingVertical:Padding_Vertical
-               
         }
      })
      const OnPress=()=>{
@@ -113,7 +112,7 @@ const Buttons_Animation=()=>{
           )  :
           (
             <TouchableOpacity  style={styles.Plus_Btn} onPress={OnPress1} >
-            <Image source={require('../../Assets/PlusWhite.png')} resizeMode="contain" style={{tintColor:'white'}}/>
+            <Image source={require('../../Assets/dots.png')} resizeMode="contain" style={{tintColor:'white',width:25,height:25}}/>
             </TouchableOpacity>
           ) 
         }
@@ -136,10 +135,7 @@ Container:{
 Box:{
    position:"absolute",
 },
-Plus_Btn:{
 
-  backgroundColor:"blue"
-},
 Txt:{
     color:'white',
     fontSize:14,
@@ -169,7 +165,7 @@ Img:{
     width:35,height:35,
 },
 LongBar:{
-    width:70,
+    width:60,
     backgroundColor:'red',
     position:"absolute",
     bottom:10,
