@@ -12,13 +12,19 @@ import Swiper from '../Screen/ScrollView/Swiper';
 import GestureDemo1 from '../Screen/PanGestureHandle/GestureDemo';
 import Drag_Drop from '../Screen/PanGestureHandle/Drag_Drop';
 import Swiper_FlatList from '../Screen/ScrollView/Swiper_Flatlist';
+import Tinder_Cards from '../Screen/TinderCards.js/TinderCard';
 
 
 const Stack = createNativeStackNavigator();
 const MyStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName='Swiper_Flatlist' screenOptions={{headerShown:'false'}} >
+      <Stack.Navigator  initialRouteName='Tinder_Cards' screenOptions={{headerShown:'false'}} >
+      <Stack.Screen
+          name="Tinder_Cards"
+          component={Tinder_Cards}
+          options={{title: 'Ashraf Sarfraz'}}
+        />
       <Stack.Screen
           name="Swiper"
           component={Swiper}
