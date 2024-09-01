@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   btnBg: {
-    width: 100, // Adjusted to fit the button width
+    width: 80,
     height: 'auto',
     backgroundColor: '#fff',
     borderRadius: 10,
