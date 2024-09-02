@@ -15,13 +15,18 @@ import Swiper_FlatList from '../Screen/ScrollView/Swiper_Flatlist';
 import Tinder_Cards from '../Screen/TinderCards.js/TinderCard';
 import RotatingImageOnPress from '../Screen/Rotation/RotateImage';
 import Vertical_Buttons from '../Screen/Interpolate/Vertical_Buttons';
+import AnimatedBottom from '../Screen/Engineer/AnimatedBottom';
+import AnimatedBtn from '../Screen/Engineer/AnimatedBtn';
+import AnimatedBtnLoader from '../Screen/Engineer/AnimatedBtnLoading';
+import AnimatedBtnLoader2 from '../Screen/Engineer/AnimatedBtnLoading2';
+import AnimatedOnboarding from '../Screen/Engineer/AnimatedOnBoarding';
 
 
 const Stack = createNativeStackNavigator();
 const MyStack = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator  initialRouteName='Vertical_Buttons' screenOptions={{headerShown:'false'}} >
+      <Stack.Navigator  initialRouteName='Anim' screenOptions={{headerShown:'false'}} >
       <Stack.Screen     name="FirstPage"            component={First_Page}            />
       <Stack.Screen     name="FirstScreen"          component={First_Screen}          />
       <Stack.Screen     name="EaseOut"              component={EaseOut}               />
@@ -34,8 +39,13 @@ const MyStack = () => {
       <Stack.Screen     name="Swiper_Flatlist"      component={Swiper_FlatList}       />
       <Stack.Screen     name="FlipCard"             component={FlipAnimation}         />
       <Stack.Screen     name="Tinder_Cards"         component={Tinder_Cards}          />
+      <Stack.Screen     name="AnimatedBottom"            component={AnimatedBottom}       options={{title: 'Ashraf Sarfraz'}}     />
+      <Stack.Screen     name="AnimatedBtn"            component={AnimatedBtn}       options={{title: 'Ashraf Sarfraz'}}     />
+      <Stack.Screen     name="AnimtedBtnLoading"            component={AnimatedBtnLoader}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim"            component={AnimatedOnboarding}       options={{title: 'Ashraf Sarfraz'}}  />
       <Stack.Screen     name="Vertical_Buttons"     component={Vertical_Buttons}   
       options={{title: 'Ashraf Sarfraz'}} />
+      
   
 
        </Stack.Navigator>
