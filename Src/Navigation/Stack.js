@@ -20,6 +20,17 @@ import AnimatedBtn from '../Screen/Engineer/AnimatedBtn';
 import AnimatedBtnLoader from '../Screen/Engineer/AnimatedBtnLoading';
 import AnimatedBtnLoader2 from '../Screen/Engineer/AnimatedBtnLoading2';
 import AnimatedOnboarding from '../Screen/Engineer/AnimatedOnBoarding';
+import Animations from '../Screen/Engineer/Animations';
+import BottomNav from '../Screen/Engineer/BottomNav';
+import CartDemo2 from '../Screen/Engineer/CartDemo2';
+import PuttingIntoCart from '../Screen/Engineer/CartDemo';
+import Demo1 from '../Screen/Engineer/Demo1';
+import Demo2 from '../Screen/Engineer/Demo2';
+import MoneyAnimation from '../Screen/Engineer/MoneyAnimation';
+import SensorDemo from '../Screen/Engineer/SensorDemo';
+import WpAnimation2 from '../Screen/Engineer/WpAnimation2';
+import WpDemo from '../Screen/Engineer/WpDemo';
+import YoutubeDemo from '../Screen/Engineer/YoutubeDemo';
 
 
 const Stack = createNativeStackNavigator();
@@ -39,12 +50,18 @@ const MyStack = () => {
       <Stack.Screen     name="Swiper_Flatlist"      component={Swiper_FlatList}       />
       <Stack.Screen     name="FlipCard"             component={FlipAnimation}         />
       <Stack.Screen     name="Tinder_Cards"         component={Tinder_Cards}          />
-      <Stack.Screen     name="AnimatedBottom"            component={AnimatedBottom}       options={{title: 'Ashraf Sarfraz'}}     />
-      <Stack.Screen     name="AnimatedBtn"            component={AnimatedBtn}       options={{title: 'Ashraf Sarfraz'}}     />
-      <Stack.Screen     name="AnimtedBtnLoading"            component={AnimatedBtnLoader}       options={{title: 'Ashraf Sarfraz'}}  />
-      <Stack.Screen     name="Anim"            component={AnimatedOnboarding}       options={{title: 'Ashraf Sarfraz'}}  />
-      <Stack.Screen     name="Vertical_Buttons"     component={Vertical_Buttons}   
-      options={{title: 'Ashraf Sarfraz'}} />
+      <Stack.Screen     name="AnimatedBottom"       component={AnimatedBottom}        />
+      <Stack.Screen     name="AnimatedBtn"          component={AnimatedBtn}           />
+      <Stack.Screen     name="AnimtedBtnLoading"    component={AnimatedBtnLoader}     />
+      <Stack.Screen     name="Anim1"                 component={CartDemo2}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim2"                 component={Demo1}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim3"                 component={Demo2}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim"                 component={MoneyAnimation}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim7"                 component={SensorDemo}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim8"                 component={WpAnimation2}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim9"                 component={WpDemo}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Anim99"                 component={YoutubeDemo}       options={{title: 'Ashraf Sarfraz'}}  />
+      <Stack.Screen     name="Vertical_Buttons"     component={Vertical_Buttons}    />
       
   
 
