@@ -1,5 +1,5 @@
 import {View, Text, Image, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import Animated, {
   useAnimatedStyle,
   useSharedValue,
@@ -8,6 +8,7 @@ import Animated, {
 } from 'react-native-reanimated';
 const AnimatedImage = Animated.createAnimatedComponent(Image);
 const MoneyAnimation = () => {
+  const [press, setpress]=useState(false)
   const image1 = useSharedValue('0deg');
   const image4 = useSharedValue('0deg');
   const image2 = useSharedValue('0deg');
@@ -80,12 +81,24 @@ const MoneyAnimation = () => {
           alignSelf: 'center',
         }}
         onPress={() => {
-          image1.value = withSpring('20deg');
-          image4.value = withSpring('30deg');
-          image2.value = withSpring('15deg');
-          image3.value = withSpring('0deg');
+          setpress(!press)
+          if(press){
+            image1.value = withSpring('20deg');
+            image4.value = withSpring('30deg');
+            image2.value = withSpring('15deg');
+            image3.value = withSpring('0deg');
+          }
+          else{
+            image1.value = withSpring('0deg');
+            image4.value = withSpring('0deg');
+            image2.value = withSpring('0deg');
+            image3.value = withSpring('0deg');
+          }
+           
         }}>
-        <Text style={{color: 'white'}}>Increase Money</Text>
+          {press===true?(<Text style={{color: 'white'}}>Increase Money</Text>):
+                        (<Text style={{color: 'white'}}>Decrease Money</Text>)}
+       
       </TouchableOpacity>
     </View>
   );
